@@ -2,12 +2,16 @@ public class Main {
     public static void main(String[] args) {
         Lista listaTecniche = new Lista();
 
-        listaTecniche.aggiungiTecnica(new Tecnica("RNC", 2, "sottomissione"));
-        listaTecniche.aggiungiTecnica(new Tecnica("kuzushi", 3, "proiezione"));
-        listaTecniche.aggiungiTecnica(new Tecnica("leva al braccio", 3, "sottomissione"));
+        listaTecniche.aggiungi(new Tecnica("RNC", 2, Tecnica.Categoria.SOTTOMISSIONE));
+        listaTecniche.aggiungi(new Tecnica("Leva al braccio", 1, Tecnica.Categoria.SOTTOMISSIONE));
+        listaTecniche.aggiungi(new Tecnica("Triangolo", 3, Tecnica.Categoria.PROIEZIONE));
 
+        System.out.println("Lista delle tecniche:");
+        listaTecniche.stampaLista();
 
-        System.out.println("Lista delle tecniche: ");
+        listaTecniche.aggiungi(new Tecnica("Americana", 4, Tecnica.Categoria.SOTTOMISSIONE));
+
+        System.out.println("Lista delle tecniche aggiornata:");
         listaTecniche.stampaLista();
     }
 }

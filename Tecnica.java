@@ -1,9 +1,13 @@
 public class Tecnica {
     private String nome;
     private int difficolta;
-    private String categoria;
+    private Categoria categoria;
 
-    public Tecnica(String nome, int difficolta, String categoria) {
+    public enum Categoria {
+        PROIEZIONE, SOTTOMISSIONE
+    }
+
+    public Tecnica(String nome, int difficolta, Categoria categoria) {
         this.nome = nome;
         this.difficolta = difficolta;
         this.categoria = categoria;
@@ -17,17 +21,8 @@ public class Tecnica {
         return difficolta;
     }
 
-    public String getCategoria() {
+    public Categoria getCategoria() {
         return categoria;
-    }
-
-    private boolean categoriaValida(String categoria) {
-        if (categoria == null) {
-            return false;
-        }
-        if (categoria.equals("proiezione")) return true;
-        if (categoria.equals("sottomissione")) return true;
-        return false;
     }
 
     public String toString() {
