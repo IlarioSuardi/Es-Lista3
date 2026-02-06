@@ -10,6 +10,7 @@ public class Main {
         listaTecniche.stampaLista();
 
         listaTecniche.aggiungi(new Tecnica("Americana", 4, Tecnica.Categoria.SOTTOMISSIONE));
+        listaTecniche.rimuoviElemento("Triangolo");
 
         System.out.println("Lista delle tecniche aggiornata:");
         listaTecniche.stampaLista();
