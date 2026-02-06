@@ -21,7 +21,25 @@ public class Lista {
         current.next = nuovoNodo;
     }
 
+    public void rimuoviElemento(String tecnica) {
+        if (head == null) return;
+        if (head.tecnica.getNome().equals(tecnica)) {
+            head = head.next;
+            return;
+        }
+        Nodo current = head;
+        while (current.next != null) {
+            if (current.next.tecnica.getNome().equals(tecnica)) {
+                current.next = current.next.next;
+                return;
+            }
+            current = current.next;
+        }
+    }
 
+    public Iteratore getIteratore() {
+        return new Iteratore(head);
+    }
 
     public void stampaLista() {
         Nodo c = head; while (c != null) {
