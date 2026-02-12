@@ -14,4 +14,6 @@ public class Iteratore {
         current = current.next;
         return tecnica;
     }
+
+
 }

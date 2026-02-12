@@ -26,6 +26,6 @@ public class Tecnica {
     }
 
     public String toString() {
-        return nome + " (" + categoria + ", difficoltà: " + difficolta + ")";
+        return nome + " (difficoltà: " + difficolta + ", categoria: " + categoria + ")";
     }
 }
